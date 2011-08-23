@@ -4,7 +4,7 @@ This is a simple (Work-In-Progress) PHP wrapper for the Topsy API. The library r
 
 Read the [API Documentation](http://code.google.com/p/otterapi/w/list) for more info on the API itself, or see examples below for using the library.
 
-The library implements Topsy's API keys, which are not quite live, but it's best to send one anyway in preparation. Topsy also asks that you send a User-Agent containing the URL of your app or service, this can be done in the constructor.
+The library implements Topsy's API keys, which are not quite live, but it's best to send one anyway in preparation. You can [get an API key here](http://manage.topsy.com/app/) if you need one. Topsy also asks that you send a User-Agent containing the URL of your app or service, this can be done in the constructor.
 
 ## Basic Usage
 
