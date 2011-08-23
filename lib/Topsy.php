@@ -171,7 +171,7 @@ class Topsy {
 	 * Calculate an API URL from an endpoint.
 	 *
 	 * @param string $value The API key to set. Default value is `null`.
-	 * @return string|Topsy Returns the API key if `$value` is `null`, otherwise the calling `Topsy` object is returned for chaining.
+	 * @return string Returns the calculated URL.
 	 */
 	protected function calculate_url($endpoint) {
 		

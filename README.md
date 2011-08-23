@@ -8,7 +8,7 @@ The library implements Topsy's API keys, which are not quite live, but it's best
 
 ## Basic Usage
 
-The `get` method is used to send a `GET` request to the Topsy API. The first argument is the endpoint to get, the second is an array of query parameters. All class methods are well documented in the source if you require further detail.
+The `Topsy::get()` method is used to send a `GET` request to the Topsy API. The first argument is the endpoint to get, the second is an array of query parameters. All class methods are well documented in the source if you require further detail.
 
 ```php
 <?php
@@ -28,7 +28,7 @@ $topsy->get('trackbacks', array(
 ?>
 ```
 
-Most API endpoints have shortcut functions too.
+Most API endpoints have shortcut methods too.
 
 ```php
 <?php
