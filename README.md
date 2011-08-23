@@ -28,17 +28,6 @@ $topsy->get('trackbacks', array(
 ?>
 ```
 
-Most API endpoints have shortcut methods too.
-
-```php
-<?php
-
-// we can simplify the above example like this
-$topsy->trackbacks('http://github.com/');
-
-?>
-```
-
 ---
 
 Copyright 2011, Rowan Manning  
