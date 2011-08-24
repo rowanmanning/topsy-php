@@ -31,6 +31,7 @@ $response = $topsy->get('trackbacks', array(
 All requests return a simple object, so the `$response` variable above will contain something like this:
 
 ```php
+<?php
 
 print_r($response);
 
@@ -77,6 +78,7 @@ stdClass Object
 )
 */
 
+?>
 ```
 
 ---
