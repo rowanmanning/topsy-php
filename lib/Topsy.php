@@ -189,7 +189,7 @@ class Topsy {
 	 * @param string $method The HTTP method to use.
 	 * @param string $endpoint The API endpoint to request.
 	 * @param array $params An array of parameters to send with the request. Default value is `null`.
-	 * @return array Returns an array of response data.
+	 * @return object Returns a response object. The response object always has the 'status', 'headers' and 'body' properties. The 'status' property contains the HTTP status code of the response; the 'headers' property contains an array of headers sent with the response; and the 'body' property contains the response body as a decoded JSON object. See http://code.google.com/p/otterapi/wiki/ResponseFormats#JSON for more information.
 	 */
 	protected function request($method, $endpoint, $params = null) {
 		
@@ -270,7 +270,7 @@ class Topsy {
 	 *
 	 * @param string $endpoint The API endpoint to request.
 	 * @param array $params An array of parameters to send with the request. Default value is `null`.
-	 * @return array Returns an array of response data.
+	 * @return object Returns a response object. The response object always has the 'status', 'headers' and 'body' properties. The 'status' property contains the HTTP status code of the response; the 'headers' property contains an array of headers sent with the response; and the 'body' property contains the response body as a decoded JSON object. See http://code.google.com/p/otterapi/wiki/ResponseFormats#JSON for more information.
 	 */
 	public function get($endpoint, $params = null) {
 		
