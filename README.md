@@ -1,6 +1,6 @@
 # Topsy API PHP Wrapper
 
-This is a simple (Work-In-Progress) PHP wrapper for the Topsy API. The library requires PHP 5.3, and is easy to use.
+This is a simple PHP wrapper for the Topsy API. The library requires PHP 5.3, and is easy to use.
 
 Read the [API Documentation](http://code.google.com/p/otterapi/w/list) for more info on the API itself, or see examples below for using the library.
 
