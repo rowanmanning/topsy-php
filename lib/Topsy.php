@@ -40,21 +40,21 @@ class Topsy {
 	 *
 	 * @var integer
 	 */
-	protected $api_rate_limit = null;
+	protected $rate_limit = null;
 	
 	/**
 	 * The API rate limit remaining.
 	 *
 	 * @var integer
 	 */
-	protected $api_rate_limit_remaining = null;
+	protected $rate_limit_remaining = null;
 	
 	/**
 	 * The API rate limit reset time, as a UNIX time-stamp.
 	 *
 	 * @var integer
 	 */
-	protected $api_rate_limit_reset = null;
+	protected $rate_limit_reset = null;
 	
 	//------------------------------------------------------------
 	// GET/SET FUNCTIONS
@@ -103,15 +103,15 @@ class Topsy {
 	 *
 	 * @return integer Returns the API rate limit.
 	 */
-	public function api_rate_limit() {
+	public function rate_limit() {
 		
 		// ensure we have rate limit data
-		if ($this->api_rate_limit === null) {
+		if ($this->rate_limit === null) {
 			$this->get('credit');
 		}
 		
 		// get
-		return $this->api_rate_limit;
+		return $this->rate_limit;
 		
 	}
 	
@@ -120,15 +120,15 @@ class Topsy {
 	 *
 	 * @return integer Returns the API rate limit remaining.
 	 */
-	public function api_rate_limit_remaining() {
+	public function rate_limit_remaining() {
 		
 		// ensure we have rate limit data
-		if ($this->api_rate_limit === null) {
+		if ($this->rate_limit === null) {
 			$this->get('credit');
 		}
 		
 		// get
-		return $this->api_rate_limit_remaining;
+		return $this->rate_limit_remaining;
 		
 	}
 	
@@ -137,15 +137,15 @@ class Topsy {
 	 *
 	 * @return integer Returns the API rate limit reset time.
 	 */
-	public function api_rate_limit_reset() {
+	public function rate_limit_reset() {
 		
 		// ensure we have rate limit data
-		if ($this->api_rate_limit === null) {
+		if ($this->rate_limit === null) {
 			$this->get('credit');
 		}
 		
 		// get
-		return $this->api_rate_limit_reset;
+		return $this->rate_limit_reset;
 		
 	}
 	
@@ -250,9 +250,9 @@ class Topsy {
 		
 		// store the new rate limit data
 		if (isset($response_headers['X-RateLimit-Limit'])) {
-			$this->api_rate_limit = (integer) $response_headers['X-RateLimit-Limit'];
-			$this->api_rate_limit_remaining = (integer) $response_headers['X-RateLimit-Remaining'];
-			$this->api_rate_limit_reset = (integer) $response_headers['X-RateLimit-Reset'];
+			$this->rate_limit = (integer) $response_headers['X-RateLimit-Limit'];
+			$this->rate_limit_remaining = (integer) $response_headers['X-RateLimit-Remaining'];
+			$this->rate_limit_reset = (integer) $response_headers['X-RateLimit-Reset'];
 		}
 		
 		// package up and return the response
