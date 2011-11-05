@@ -1,12 +1,13 @@
-# Topsy API PHP Wrapper
+# Topsy API PHP Library #
 
-This is a simple (Work-In-Progress) PHP wrapper for the Topsy API. The library requires PHP 5.3, and is easy to use.
+This is a simple PHP library for using the Topsy API. The library requires PHP 5.3, and is easy to use.
 
-Read the [API Documentation](http://code.google.com/p/otterapi/w/list) for more info on the API itself, or see examples below for using the library.
+Read the [API Documentation](http://code.google.com/p/otterapi/wiki/Resources) for more info on the API itself, or see examples below for using the library.
 
-The library implements Topsy's API keys, which are not quite live, but it's best to send one anyway in preparation. You can [get an API key here](http://manage.topsy.com/app/) if you need one. Topsy also asks that you send a User-Agent containing the URL of your app or service, this can be done in the constructor.
+The Topsy API allows anonymous access, but it's best to use an API key; you can [get an API key here](http://manage.topsy.com/app/) if you need one. Topsy also asks that you send a User-Agent containing the URL of your app or service, this can be done in the constructor.
 
-## Basic Usage
+
+## Basic Usage ##
 
 The `Topsy::get()` method is used to send a `GET` request to the Topsy API. The first argument is the endpoint to get, the second is an array of query parameters. All class methods are well documented in the source if you require further detail.
 
@@ -28,7 +29,17 @@ $topsy->get('trackbacks', array(
 ?>
 ```
 
----
+
+## Testing ##
+
+This library is tested using [PHPUnit](https://github.com/sebastianbergmann/phpunit). To run tests, navigate to the repository via the command line and run the following:
+
+```sh
+$ phpunit
+```
+
+
+## License ##
 
 Copyright 2011, Rowan Manning  
-Dual licensed under the MIT or GPL Version 2 licenses.
+Dual licensed under the [MIT](http://opensource.org/licenses/mit-license.php) or [GPL Version 2](http://opensource.org/licenses/gpl-2.0.php) licenses.

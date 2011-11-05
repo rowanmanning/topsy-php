@@ -150,14 +150,14 @@ class Topsy {
 	}
 	
 	//------------------------------------------------------------
-	// CORE FUNCTIONS
+	// FUNCTIONS
 	//------------------------------------------------------------
 	
 	/**
 	 * Class constructor.
 	 * 
-	 * @param string $api_key The API key to send with all API requests.
-	 * @param string $user_agent The HTTP User-Agent header to send with all API requests. Topsy specifies that this should be your application or service URL.
+	 * @param string $api_key The API key to send with all API requests. Default value is `null`.
+	 * @param string $user_agent The HTTP User-Agent header to send with all API requests. Topsy specifies that this should be your application or service URL. Default value is `null`.
 	 */
 	public function __construct($api_key = null, $user_agent = null) {
 		
