@@ -22,11 +22,56 @@ $user_agent = 'http://yourapp.com/';
 $topsy = new Topsy($api_key, $user_agent);
 
 // make a call to the '/trackbacks' endpoint, getting trackbacks for the GitHub website
-$topsy->get('trackbacks', array(
+$response = $topsy->get('trackbacks', array(
 	'url' => 'http://github.com/',
 ));
 
 ?>
+```
+
+All requests return a simple object, so the `$response` variable above will contain something like this:
+
+```
+stdClass Object
+(
+	
+	// the status property contains the HTTP status code of
+	// the response
+	[status] => 200
+	
+	// the headers property contains an array of all headers sent
+	// as part of the response
+	[headers] => Array
+		(
+			[Content-Type] => application/json; charset=utf-8
+			[X-RateLimit-Limit] => 10000
+			[X-RateLimit-Remaining] => 10000
+			[X-RateLimit-Reset] => 1234567890
+			// etc...
+		)
+	
+	// the body property contains the decoded JSON response body
+	// which differs depending on the requested endpoint. see
+	// http://code.google.com/p/otterapi/wiki/ResponseFormats#JSON
+	// for more detail
+	[body] => stdClass Object
+		(
+			
+			// details the request that lead to this response
+			[request] => stdClass Object
+				(
+					// etc...
+				)
+			
+			// the actual response
+			[response] => stdClass Object
+				(
+					// properties depend on the endpoint requested
+				)
+
+		)
+
+)
 ```
 
 
