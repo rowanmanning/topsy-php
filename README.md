@@ -2,6 +2,8 @@
 
 This is a simple PHP library for using the Topsy API. The library requires PHP 5.3, and is easy to use.
 
+**NOTE: This project is no longer being maintained. If you're interested in taking over maintenance of this repo, please contact me.**
+
 Read the [API Documentation](http://code.google.com/p/otterapi/wiki/Resources) for more info on the API itself, or see examples below for using the library.
 
 The Topsy API allows anonymous access, but it's best to use an API key; you can [get an API key here](http://manage.topsy.com/app/) if you need one. Topsy also asks that you send a User-Agent containing the URL of your app or service, this can be done in the constructor.
